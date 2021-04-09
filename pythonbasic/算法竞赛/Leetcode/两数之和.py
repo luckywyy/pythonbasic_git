@@ -49,5 +49,4 @@ for i in range(n):
         if nums[i] + nums[j] == target:
             print(i, j)
 
-# 两数之和改
 
