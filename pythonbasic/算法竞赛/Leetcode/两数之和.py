@@ -28,16 +28,9 @@
 
 # 这是leetcode上难度为简单的题目，确实也不难
 
-# 输入格式如下
-# class Solution {
-# public:
-#     vector < int > twoSum(vector < int > & nums, int
-#
-#
-# target) {
-#
-# }
-# };
+# 输入如下
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
 
 
 nums = list(map(int, input().split(',')))
