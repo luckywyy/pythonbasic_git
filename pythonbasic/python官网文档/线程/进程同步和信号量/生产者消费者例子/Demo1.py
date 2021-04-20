@@ -12,6 +12,7 @@ item = 0
 def productor():
     global in_, buffer, counter, item
     while 1:
+        # 发信号停
         while counter == BUFFER_SIZE:
             print("productor wait...\n")
         item = random.randint(1, 1000)
@@ -20,11 +21,14 @@ def productor():
         print("product counter {}\n".format(counter))
         in_ = (in_+1) % BUFFER_SIZE
 
+        # 发信号走
         counter += 1
+
 
 def customer():
     global out_, buffer, counter, item
     while 1:
+        # 发信号停
         while counter == 0:
             print("customer wait...\n")
 
@@ -33,6 +37,7 @@ def customer():
         print("custom counter {}\n".format(counter))
         out_ = (out_+1) % BUFFER_SIZE
 
+        # 发信号走
         counter -= 1
 
 
@@ -41,5 +46,10 @@ customerThread = threading.Thread(target=customer)
 
 productorThread.start()
 customerThread.start()
+
+# 信号只能表达有还是没有，而信号量可以表达更丰富的信息
+
+
+
 
 
