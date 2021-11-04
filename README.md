@@ -1,5 +1,11 @@
-# pythonbasic_git
+### Python
 
-关联javabasic_git
+基础语法
 
-python一些例子算法 pythonbasic为主目录
+数据结构
+
+算法题
+
+常用框架使用 包括Flask Django3.x等...
+
+更新中...
